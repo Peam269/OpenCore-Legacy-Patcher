@@ -1,7 +1,5 @@
 # OpenCore Legacy Patcher changelog
 
-## 0.4.5
-
 ## 0.4.4
 - Lower SIP requirement for Root Patching
   - Sets to 0x802 (previously 0xA03)
@@ -52,8 +50,6 @@
 - Remove manual root unpatching
   - Removed due to reliablity issues
   - `bless` based reversion still supported in Big Sur+
-- Remove Unoffical Mojave/Catalina Root Patching
-  - For TeraScale 2-based acceleration on older OSes, use v0.4.3
 - Simplify Binary options
   - Removes Online Patcher Variants
   - Offline variants are now new defaults, no longer retain `Offline` suffix

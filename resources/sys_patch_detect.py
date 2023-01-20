@@ -44,7 +44,10 @@ class detect_root_patch:
     
     def detect_gpus(self):
         gpus = self.constants.computer.gpus
-        non_metal_os = os_data.os_data.catalina
+        if self.constants.moj_cat_accel is True:
+            non_metal_os = os_data.os_data.high_sierra
+        else:
+            non_metal_os = os_data.os_data.catalina
         for i, gpu in enumerate(gpus):
             if gpu.class_code and gpu.class_code != 0xFFFFFFFF:
                 print(f"- Found GPU ({i}): {utilities.friendly_hex(gpu.vendor_id)}:{utilities.friendly_hex(gpu.device_id)}")
